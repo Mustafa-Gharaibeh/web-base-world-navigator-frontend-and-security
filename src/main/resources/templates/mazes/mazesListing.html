@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Mazes</title>
+</head>
+<body>
+<div layout:fragment="main-content">
+    <h2 class="card-header">
+        <label th:text="${name}" style="color: #ffe2e2">Name</label>
+        Please Choose one of these Mazes
+    </h2>
+    <form th:object="${mazes}" th:action="@{/mazes/start}" method="post">
+        <fieldset>
+            <legend>Choose One</legend>
+            <ul>
+                <li th:each="maze : ${mazes}">
+                    <td th:text="${maze}"></td>
+                </li>
+            </ul>
+        </fieldset>
+
+        <label for="command"><input type="text" th:feild="${command}" id="command" name="command" required="required"
+                                    placeholder="Your Choice" autofocus="autofocus"/></label>
+        <p>
+            <label style="color: #ffabab">* You Will Enter One Of Choices With Case sensitive</label>
+        </p>
+        <p>
+            <input type="submit" value="Submit"/>
+            <input type="reset" value="Reset"/>
+        </p>
+    </form>
+</div>
+</body>
+</html>

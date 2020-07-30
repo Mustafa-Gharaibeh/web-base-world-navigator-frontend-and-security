@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+<div layout:fragment="main-content">
+    <h1 class="card-header">Welcome To World Navigator Assignment - Web base</h1>
+    <div class="form-signin">
+        <a href="/login" class="btn btn-lg btn-primary btn-block" type="submit">Login</a>
+        <br/>
+        <p><a href="/signUp" class="btn btn-lg btn-primary btn-block">SignUp</a></p>
+    </div>
+</div>
+
+</body>
+</html>
